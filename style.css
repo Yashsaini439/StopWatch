@@ -1,0 +1,142 @@
+/* Global Reset & Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Black background and white text */
+body {
+  background-color: #0b0c10;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Centered container with fixed layout */
+.container {
+  background: #12141d;
+  border: 1px solid #1f2430;
+  border-radius: 24px;
+  padding: 32px 28px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Display tag */
+.display-wrapper {
+  margin: 10px 0 24px 0;
+}
+
+label#display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #00f2fe;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+}
+
+/* Controls layout */
+.controls {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Primary / Start Button */
+.btn-primary {
+  background: #10b981;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:hover {
+  background: #059669;
+}
+
+/* Red background for Stop state */
+.btn-primary.stop {
+  background: #ef4444;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+}
+
+.btn-primary.stop:hover {
+  background: #dc2626;
+}
+
+/* Secondary / Lap / Reset Button */
+.btn-secondary {
+  background: #272a37;
+  color: #9ca3af;
+  border: 1px solid #374151;
+}
+
+.btn-secondary:hover {
+  background: #374151;
+  color: #ffffff;
+}
+
+.laps-wrapper {
+  margin-top: 24px;
+  width: 100%;
+  height: 180px; 
+  overflow-y: auto;
+}
+
+/* Custom Scrollbar */
+.laps-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.laps-wrapper::-webkit-scrollbar-thumb {
+  background: #272a37;
+  border-radius: 4px;
+}
+
+/* Lap list styling */
+ul#lapsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 4px;
+}
+
+ul#lapsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1d29;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #d1d5db;
+  border: 1px solid #232838;
+}
+
+ul#lapsList li span.lap-count {
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+}
